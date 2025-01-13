@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Sankranti</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #FFB74D, #FF9800);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            color: #8B4513;
+            animation: fadeIn 2s ease-in;
+            z-index: 2;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .sun {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at 50% 50%, #FFF176, #FFB300);
+            border-radius: 50%;
+            box-shadow: 0 0 80px #FFB300;
+            animation: shine 3s infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes shine {
+            from { transform: scale(1); box-shadow: 0 0 80px #FFB300; }
+            to { transform: scale(1.1); box-shadow: 0 0 100px #FFB300; }
+        }
+
+        .kites-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .kite {
+            position: absolute;
+            animation: flyKite 20s infinite linear;
+        }
+
+        .kite:nth-child(2) { animation-delay: -7s; }
+        .kite:nth-child(3) { animation-delay: -14s; }
+
+        @keyframes flyKite {
+            0% { transform: translate(-100px, 100px) rotate(10deg); }
+            50% { transform: translate(50vw, -50px) rotate(-5deg); }
+            100% { transform: translate(calc(100vw + 100px), 100px) rotate(10deg); }
+        }
+
+        .rangoli-container {
+            width: 600px;
+            height: 600px;
+            margin: 20px auto;
+            position: relative;
+            background: #FFF;
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+
+        .wishes {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .sugarcane {
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            height: 300px;
+            background: linear-gradient(90deg, #81C784, #4CAF50);
+            transform-origin: bottom center;
+        }
+
+        .sugarcane::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 4px;
+            background: #2E7D32;
+        }
+
+        .sugarcane::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, 
+                transparent, 
+                transparent 30px, 
+                #2E7D32 30px, 
+                #2E7D32 32px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        
+        <div class="kites-container">
+            <svg class="kite" width="120" height="120" viewBox="0 0 120 120">
+                <polygon points="60,10 110,60 60,110 10,60" fill="#FF6B6B" stroke="#000" stroke-width="2"/>
+                <line x1="60" y1="10" x2="60" y2="110" stroke="#000" stroke-width="1"/>
+                <line x1="10" y1="60" x2="110" y2="60" stroke="#000" stroke-width="1"/>
+                <g stroke="#000" stroke-width="0.5">
+                    <line x1="60" y1="10" x2="10" y2="60"/>
+                    <line x1="60" y1="20" x2="20" y2="60"/>
+                    <line x1="60" y1="30" x2="30" y2="60"/>
+                    <line x1="60" y1="40" x2="40" y2="60"/>
+                    <line x1="60" y1="50" x2="50" y2="60"/>
+                    <line x1="60" y1="10" x2="110" y2="60"/>
+                    <line x1="60" y1="20" x2="100" y2="60"/>
+                    <line x1="60" y1="30" x2="90" y2="60"/>
+                    <line x1="60" y1="40" x2="80" y2="60"/>
+                    <line x1="60" y1="50" x2="70" y2="60"/>
+                    <line x1="60" y1="110" x2="10" y2="60"/>
+                    <line x1="60" y1="100" x2="20" y2="60"/>
+                    <line x1="60" y1="90" x2="30" y2="60"/>
+                    <line x1="60" y1="80" x2="40" y2="60"/>
+                    <line x1="60" y1="70" x2="50" y2="60"/>
+                    <line x1="60" y1="110" x2="110" y2="60"/>
+                    <line x1="60" y1="100" x2="100" y2="60"/>
+                    <line x1="60" y1="90" x2="90" y2="60"/>
+                    <line x1="60" y1="80" x2="80" y2="60"/>
+                    <line x1="60" y1="70" x2="70" y2="60"/>
+                </g>
+            </svg>
+
+            <svg class="kite" width="120" height="120" viewBox="0 0 120 120">
+                <use href="#kite-pattern" fill="#4ECDC4"/>
+            </svg>
+
+            <svg class="kite" width="120" height="120" viewBox="0 0 120 120">
+                <use href="#kite-pattern" fill="#FFE66D"/>
+            </svg>
+        </div>
+
+        <div class="header">
+            <h1 style="font-size: 3.5em; margin-bottom: 20px;">శుభ మకర సంక్రాంతి</h1>
+            <h2 style="color: #654321;">Happy Sankranti!</h2>
+        </div>
+
+        <div class="rangoli-container">
+            <svg viewBox="0 0 600 600">
+                <!-- Base circles -->
+                <circle cx="300" cy="300" r="290" fill="none" stroke="#FF5722" stroke-width="2"/>
+                <circle cx="300" cy="300" r="270" fill="none" stroke="#FF9800" stroke-width="2"/>
+                <circle cx="300" cy="300" r="250" fill="none" stroke="#FFB74D" stroke-width="2"/>
+                
+                <!-- Intricate Rangoli Pattern -->
+                <g transform="translate(300, 300)">
+                    <!-- 16-fold symmetrical pattern -->
+                    <g id="rangoli-segment">
+                        <!-- Main petal -->
+                        <path d="M0,0 L180,0 A180,180 0 0,1 127.27,127.27 Z" fill="#FFA000" stroke="#FF5722" stroke-width="1"/>
+                        <!-- Inner petal -->
+                        <path d="M0,0 L120,0 A120,120 0 0,1 84.85,84.85 Z" fill="#FF7043" stroke="#FF5722" stroke-width="1"/>
+                        <!-- Decorative elements -->
+                        <circle cx="90" cy="0" r="8" fill="#E91E63"/>
+                        <circle cx="140" cy="0" r="8" fill="#E91E63"/>
+                        <!-- Traditional curves -->
+                        <path d="M40,0 Q90,20 140,0" fill="none" stroke="#FFC107" stroke-width="2"/>
+                        <path d="M40,0 Q90,-20 140,0" fill="none" stroke="#FFC107" stroke-width="2"/>
+                        <!-- Dotted details -->
+                        <circle cx="65" cy="0" r="4" fill="#FFE0B2"/>
+                        <circle cx="115" cy="0" r="4" fill="#FFE0B2"/>
+                        <!-- Curved patterns -->
+                        <path d="M0,0 Q60,30 120,0" fill="none" stroke="#FF9800" stroke-width="1.5"/>
+                        <path d="M0,0 Q60,-30 120,0" fill="none" stroke="#FF9800" stroke-width="1.5"/>
+                    </g>
+                    
+                    <!-- Repeat pattern 16 times -->
+                    <use href="#rangoli-segment" transform="rotate(30)"/>
+                    <use href="#rangoli-segment" transform="rotate(60)"/>
+                    <use href="#rangoli-segment" transform="rotate(90)"/>
+                    <use href="#rangoli-segment" transform="rotate(120)"/>
+                    <use href="#rangoli-segment" transform="rotate(150)"/>
+                    <use href="#rangoli-segment" transform="rotate(180)"/>
+                    <use href="#rangoli-segment" transform="rotate(210)"/>
+                    <use href="#rangoli-segment" transform="rotate(240)"/>
+                    <use href="#rangoli-segment" transform="rotate(270)"/>
+                    <use href="#rangoli-segment" transform="rotate(300)"/>
+                    <use href="#rangoli-segment" transform="rotate(330)"/>
+                    <use href="#rangoli-segment" transform="rotate(360)"/>
+                    <use href="#rangoli-segment" transform="rotate(390)"/>
+                    <use href="#rangoli-segment" transform="rotate(420)"/>
+                    
+                    
+                    
+                </g>
+                
+                <!-- Center mandala -->
+                <g transform="translate(300, 300)">
+                    <circle r="50" fill="#FF5722"/>
+                    <circle r="40" fill="#FF9800"/>
+                    <circle r="30" fill="#FFC107"/>
+                    <circle r="20" fill="#FFE0B2"/>
+                    <!-- Center flower pattern -->
+                    <g id="center-petal">
+                        <path d="M0,0 L15,0 A15,15 0 0,1 10.61,10.61 Z" fill="#FFE0B2"/>
+                    </g>
+                    <!-- Repeat center flower pattern -->
+                    <use href="#center-petal" transform="rotate(45)"/>
+                    <use href="#center-petal" transform="rotate(90)"/>
+                    <use href="#center-petal" transform="rotate(135)"/>
+                    <use href="#center-petal" transform="rotate(180)"/>
+                    <use href="#center-petal" transform="rotate(225)"/>
+                    <use href="#center-petal" transform="rotate(270)"/>
+                    <use href="#center-petal" transform="rotate(315)"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="wishes">
+            <h2 style="color: #8B4513; margin-bottom: 20px;">Dear Family & Friends,</h2>
+            <p style="font-size: 1.2em; line-height: 1.6; color: #654321;">
+                On this auspicious festival of Sankranti, I wish all my loving family members, cherished friends, 
+                and dear well-wishers a year filled with sweetness and joy. May this harvest festival bring abundant 
+                prosperity and countless moments of togetherness. Let's share the sweetness of tilgul and the warmth 
+                of our hearts. Wishing everyone a prosperous and delightful Sankranti!
+            </p>
+        </div>
+
+        <!-- Sugarcanes -->
+        <div class="sugarcane" style="left: 5%; transform: rotate(-15deg);"></div>
+        <div class="sugarcane" style="left: 15%; transform: rotate(10deg);"></div>
+        <div class="sugarcane" style="left: 75%; transform: rotate(-12deg);"></div>
+        <div class="sugarcane" style="left: 85%; transform: rotate(8deg);"></div>
+        <div class="sugarcane" style="left: 95%; transform: rotate(-5deg);"></div>
+    </div>
+</body>
+</html>
